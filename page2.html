@@ -6,29 +6,24 @@
     <title>He is Coming: Подробности игры</title>
     <style>
         body {
-            font-family: 'Cinzel', serif;
-            background: #0a0a1a url('images/bg-pattern-dark.png') repeat;
-            color: hsl(240, 78%, 70%);
+            font-family: Arial, sans-serif;
+            background-color: lab(100% 0.01 -0.01);
+            color: #333;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: linear-gradient(rgba(10,10,26,0.9), rgba(10,10,26,0.9)), 
-                              url('images/bg-pattern-dark.png');
         }
         
         header {
-            background: linear-gradient(135deg, #5e1b1b 0%, #cb116a 100%);
-            color: #ffd700;
-            padding: 30px 0;
+            background: linear-gradient(135deg, lab(44.07% 8.83 3.32) 0%, #764ba2 100%);
+            color: #44286b;
+            padding: 20px 0;
             text-align: center;
-            border-bottom: 3px solid #ffd700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         nav {
-            background-color: #3a1a1a;
-            padding: 15px 0;
-            border-bottom: 2px solid #8d2c4a;
+            background-color: #34495e;
+            padding: 10px 0;
         }
         
         nav ul {
@@ -36,131 +31,98 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            margin: 0;
         }
         
         nav li {
-            margin: 0 25px;
+            margin: 0 15px;
         }
         
         nav a {
-            color: #ffd700;
+            color: white;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1em;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
         }
         
         nav a:hover {
-            background-color: #cb116a;
-            color: #ffffff;
-            transform: translateY(-2px);
+            color: #ffd700;
         }
         
         main {
             max-width: 1200px;
-            margin: 30px auto;
+            margin: 20px auto;
             padding: 0 20px;
+            display: flex;
+        }
+        
+        article {
+            flex: 3;
+            margin-right: 20px;
+        }
+        
+        aside {
+            flex: 1;
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
         }
         
         section {
-            margin-bottom: 40px;
-            background: rgba(58, 26, 26, 0.8);
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid #8d2c4a;
+            margin-bottom: 30px;
         }
         
         h1 {
-            color: #ffd700;
-            font-size: 3em;
-            margin: 0;
-            letter-spacing: 2px;
+            color: #000000;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
         
         h2 {
-            color: #cb116a;
-            border-left: 4px solid #ffd700;
-            padding-left: 15px;
-            font-size: 2em;
-            margin-top: 0;
+            color: hsl(0, 0%, 0%);
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
         }
         
         p {
             font-size: 1.1em;
             text-align: justify;
-            color: #e0e0ff;
         }
         
         figure {
-            margin: 25px 0;
+            margin: 20px 0;
             text-align: center;
         }
         
         img {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
-            border: 2px solid #ffd700;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         figcaption {
             font-style: italic;
-            color: #a0a0ff;
-            margin-top: 10px;
-            font-size: 0.9em;
+            color: #666;
+            margin-top: 8px;
         }
         
         footer {
-            background: linear-gradient(135deg, #3a1a1a 0%, #5e1b1b 100%);
-            color: #ffd700;
+            background-color: #2c3e50;
+            color: white;
             text-align: center;
-            padding: 25px 0;
-            margin-top: 40px;
-            border-top: 3px solid #cb116a;
+            padding: 20px 0;
+            margin-top: 30px;
         }
         
-        .gallery {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 20px 0;
+        .external-link {
+            color: #e74c3c;
+            font-weight: bold;
         }
         
-        .gallery figure {
-            flex: 1;
-            min-width: 280px;
-            max-width: 380px;
+        .image-link {
+            display: inline-block;
+            margin: 10px 0;
         }
-        
-        .class-info {
-            background: rgba(94, 27, 27, 0.6);
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-            border-left: 4px solid #ffd700;
-        }
-        
-        .requirement-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        
-        .requirement-table th, .requirement-table td {
-            border: 1px solid #8d2c4a;
-            padding: 12px;
-            text-align: left;
-        }
-        
-        .requirement-table th {
-            background-color: #5e1b1b;
-            color: #ffd700;
-        }
+
     </style>
 </head>
 <body>
@@ -193,9 +155,10 @@
                 <p>Собери столько доспехов, сколько сможешь, чтобы древнее зло никогда не коснулось твоей плоти</p>
         </section>
     </main>
-    
+
     <footer>
         <p>Design by Боярченко Артем &copy; 2024</p>
     </footer>
+    
 </body>
 </html>
